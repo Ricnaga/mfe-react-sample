@@ -1,5 +1,5 @@
 function App() {
-  return <h1>HEllo WOrld</h1>;
+  return <h1>THIS IS REACT WEBPACK REMOTE</h1>
 }
 
 export default App;

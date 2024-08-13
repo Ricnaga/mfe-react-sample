@@ -14,7 +14,7 @@ dist-ssr
 /coverage
 
 # next.js
-/.next/
+packages/**/nextjs/.next/
 /out/
 
 # production

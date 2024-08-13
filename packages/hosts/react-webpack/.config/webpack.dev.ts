@@ -10,7 +10,7 @@ const configDev: Configuration = merge(webpackMain, {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
-    port: 3000,
+    port: 5000,
     compress: true,
     hot: true,
     historyApiFallback: true,

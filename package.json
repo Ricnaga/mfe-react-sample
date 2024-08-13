@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "nextjs": "yarn workspace @mfe-react/host-nextjs dev",
-    "vite": "yarn workspace @mfe-react/host-react-vite dev",
-    "webpack": "yarn workspace @mfe-react/host-react-webpack dev",
-    "mfe:webpack": "concurrently \"yarn webpack\""
+    "host:nextjs": "yarn workspace @mfe-react/host-nextjs dev",
+    "host:vite": "yarn workspace @mfe-react/host-react-vite dev",
+    "host:webpack": "yarn workspace @mfe-react/host-react-webpack dev",
+    "remote:nextjs": "yarn workspace @mfe-react/remote-nextjs dev",
+    "remote:vite": "yarn workspace @mfe-react/remote-react-vite dev",
+    "remote:webpack": "yarn workspace @mfe-react/remote-react-webpack dev",
+    "mfe:nextjs": "concurrently \"yarn host:nextjs\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
+    "mfe:vite": "concurrently \"yarn host:vite\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
+    "mfe:webpack": "concurrently \"yarn host:webpack\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\""
   },
   "workspaces": {
     "nohoist": [

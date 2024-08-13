@@ -1,0 +1,22 @@
+{
+  "name": "mfe-react",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "yarn workspace @mfe-react/host-react-webpack dev",
+    "mfe:webpack": "concurrently \"yarn dev\" "
+  },
+  "workspaces": {
+    "nohoist": [
+      "packages/hosts/**/**",
+      "packages/remotes/**/**"
+    ],
+    "packages": [
+      "packages/hosts/*",
+      "packages/remotes/*"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

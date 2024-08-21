@@ -30,10 +30,9 @@ const config: Configuration = {
   },
   plugins: [
     new container.ModuleFederationPlugin({
-      name: "remoteWebpack",
-      filename: "remoteEntry.js",
-      exposes: {
-        './App': "./src/App",
+      name: "shellWebpack",
+      remotes: {
+        "remoteWebpack": "remoteWebpack@http://localhost:5001/remoteEntry.js",
       },
       shared: [
         {

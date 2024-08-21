@@ -10,9 +10,9 @@
     "remote:vite-dev": "yarn workspace @mfe-react/remote-react-vite dev",
     "remote:vite": "yarn workspace @mfe-react/remote-react-vite remote",
     "remote:webpack": "yarn workspace @mfe-react/remote-react-webpack dev",
-    "mfe:nextjs": "concurrently \"yarn shell:nextjs\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
-    "mfe:vite": "concurrently \"yarn shell:vite\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
-    "mfe:webpack": "concurrently \"yarn shell:webpack\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\""
+    "mfe:nextjs": "concurrently \"yarn shell:nextjs\" \"yarn remote:nextjs\"",
+    "mfe:vite": "concurrently \"yarn shell:vite\" \"yarn remote:vite\"",
+    "mfe:webpack": "concurrently \"yarn shell:webpack\" \"yarn remote:webpack\""
   },
   "workspaces": {
     "nohoist": [

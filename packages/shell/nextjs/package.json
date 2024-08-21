@@ -1,5 +1,5 @@
 {
-  "name": "@mfe-react/host-nextjs",
+  "name": "@mfe-react/shell-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {

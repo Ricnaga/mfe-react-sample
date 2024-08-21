@@ -3,23 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "host:nextjs": "yarn workspace @mfe-react/host-nextjs dev",
-    "host:vite": "yarn workspace @mfe-react/host-react-vite dev",
-    "host:webpack": "yarn workspace @mfe-react/host-react-webpack dev",
+    "shell:nextjs": "yarn workspace @mfe-react/shell-nextjs dev",
+    "shell:vite": "yarn workspace @mfe-react/shell-react-vite dev",
+    "shell:webpack": "yarn workspace @mfe-react/shell-react-webpack dev",
     "remote:nextjs": "yarn workspace @mfe-react/remote-nextjs dev",
-    "remote:vite": "yarn workspace @mfe-react/remote-react-vite dev",
+    "remote:vite-dev": "yarn workspace @mfe-react/remote-react-vite dev",
+    "remote:vite": "yarn workspace @mfe-react/remote-react-vite remote",
     "remote:webpack": "yarn workspace @mfe-react/remote-react-webpack dev",
-    "mfe:nextjs": "concurrently \"yarn host:nextjs\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
-    "mfe:vite": "concurrently \"yarn host:vite\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
-    "mfe:webpack": "concurrently \"yarn host:webpack\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\""
+    "mfe:nextjs": "concurrently \"yarn shell:nextjs\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
+    "mfe:vite": "concurrently \"yarn shell:vite\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\"",
+    "mfe:webpack": "concurrently \"yarn shell:webpack\" \"yarn remote:nextjs\" \"yarn remote:vite\" \"yarn remote:webpack\""
   },
   "workspaces": {
     "nohoist": [
-      "packages/hosts/**/**",
+      "packages/shell/**/**",
       "packages/remotes/**/**"
     ],
     "packages": [
-      "packages/hosts/*",
+      "packages/shell/*",
       "packages/remotes/*"
     ]
   },

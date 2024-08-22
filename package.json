@@ -12,7 +12,7 @@
     "remote:webpack": "yarn workspace @mfe-react/remote-react-webpack dev",
     "mfe:nextjs": "concurrently \"yarn shell:nextjs\" \"yarn remote:nextjs\"",
     "mfe:vite": "concurrently \"yarn shell:vite\" \"yarn remote:vite\"",
-    "mfe:webpack": "concurrently \"yarn shell:webpack\" \"yarn remote:webpack\""
+    "mfe:webpack": "concurrently \"yarn shell:webpack\" \"yarn remote:webpack\" \"yarn remote:nextjs\""
   },
   "workspaces": {
     "nohoist": [

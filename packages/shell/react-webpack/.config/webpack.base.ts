@@ -13,6 +13,7 @@ const config: Configuration = {
   output: {
     path: path.join(process.cwd(), "build"),
     filename: "[name]-[contenthash].bundle.js",
+    publicPath: "auto",
   },
   resolve: {
     alias: {
@@ -30,9 +31,12 @@ const config: Configuration = {
   },
   plugins: [
     new container.ModuleFederationPlugin({
-      name: "shellWebpack",
+      name: "shell_webpack",
       remotes: {
-        "@mfe-react/remote-react-webpack": "remoteWebpack@http://localhost:5001/remoteEntry.js",
+        "@mfe-react/remote-react-webpack":
+          "remote_webpack@http://localhost:5001/remoteEntry.js",
+        "@mfe-react/remote-nextjs":
+          "remote_nextjs@http://localhost:3001/_next/static/chunks/remoteEntry.js",
       },
       shared: [
         {

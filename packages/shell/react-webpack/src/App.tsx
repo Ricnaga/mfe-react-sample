@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 
-const RemoteWebpack = React.lazy(() => import("remoteWebpack/App"));
+const RemoteWebpack = React.lazy(() => import("@mfe-react/remote-react-webpack/App"));
 
 function App() {
   return (

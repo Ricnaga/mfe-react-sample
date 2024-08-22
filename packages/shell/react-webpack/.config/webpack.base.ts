@@ -32,7 +32,7 @@ const config: Configuration = {
     new container.ModuleFederationPlugin({
       name: "shellWebpack",
       remotes: {
-        "remoteWebpack": "remoteWebpack@http://localhost:5001/remoteEntry.js",
+        "@mfe-react/remote-react-webpack": "remoteWebpack@http://localhost:5001/remoteEntry.js",
       },
       shared: [
         {

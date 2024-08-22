@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import dynamic from 'next/dynamic';
 
-const RemoteNextjs = dynamic(() => import('remoteNextjs/page'));
+const RemoteNextjs = dynamic(() => import('@mfe-react/remote-nextjs/page'));
 
 const inter = Inter({ subsets: ["latin"] });
 

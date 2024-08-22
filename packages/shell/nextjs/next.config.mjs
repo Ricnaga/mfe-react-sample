@@ -3,7 +3,7 @@ import { NextFederationPlugin } from "@module-federation/nextjs-mf";
 const remotes = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    remoteNextjs: `remoteNextjs@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
+    '@mfe-react/remote-nextjs': `remoteNextjs@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
   };
 };
 

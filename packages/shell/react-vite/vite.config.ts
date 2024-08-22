@@ -10,7 +10,7 @@ export default defineConfig({
     federation({
       name: "shellVite",
       remotes: {
-        remoteVite: "http://localhost:4001/assets/remoteEntry.js",
+        '@mfe-react/remote-react-vite': "http://localhost:4001/assets/remoteEntry.js",
       },
       shared: Object.keys(dependencies),
     }),

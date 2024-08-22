@@ -1,7 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import RemoteVite from "remoteVite/App";
+import RemoteVite from "@mfe-react/remote-react-vite/App";
 
 import "./App.css";
 

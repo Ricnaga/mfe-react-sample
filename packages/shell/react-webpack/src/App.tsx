@@ -1,18 +1,7 @@
-import { Suspense, lazy } from "react";
-
-const MFEWebpack = lazy(() => import("@mfe-react/remote-react-webpack/App"));
-const MFENextjs = lazy(() => import("@mfe-react/remote-nextjs/page"));
+import { RouterContext } from "@application/routes/context";
 
 function App() {
-  return (
-    <>
-      <h1>THIS IS REACT WEBPACK HOST</h1>
-      <Suspense fallback={<div>loading MFE...</div>}>
-        <MFEWebpack />
-        <MFENextjs />
-      </Suspense>
-    </>
-  );
+  return <RouterContext />;
 }
 
 export default App;

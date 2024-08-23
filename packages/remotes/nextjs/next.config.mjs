@@ -3,7 +3,14 @@ import { NextFederationPlugin } from "@module-federation/nextjs-mf";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config, _) => {
+  webpack: (
+    /** @type {import('webpack').Configuration} */
+    config,
+    _
+  ) => {
+    config.mode = "development";
+    config.devtool = "inline-source-map";
+
     config.plugins.push(
       new NextFederationPlugin({
         name: "remote_nextjs",
@@ -16,14 +23,14 @@ const nextConfig = {
             react: {
               eager: true,
               singleton: true,
-              requiredVersion: false,
+              requiredVersion: "^18",
             },
           },
           {
             "react-dom": {
               eager: true,
               singleton: true,
-              requiredVersion: false,
+              requiredVersion: "^18",
             },
           },
         ],

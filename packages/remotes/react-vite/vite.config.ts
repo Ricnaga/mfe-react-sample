@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "remoteVite",
+      name: "remote_vite",
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/App",

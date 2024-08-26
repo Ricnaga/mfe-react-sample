@@ -1,6 +1,6 @@
-import { Home, Next, Vite } from "@screens";
+import { Home, Next } from "@screens";
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import { HOME, NEXT, VITE } from "./paths";
+import { HOME, NEXT } from "./paths";
 
 function Container() {
   return (
@@ -23,10 +23,6 @@ export const router = createBrowserRouter([
       {
         path: NEXT,
         element: <Next />,
-      },
-      {
-        path: VITE,
-        element: <Vite />,
       },
     ],
   },

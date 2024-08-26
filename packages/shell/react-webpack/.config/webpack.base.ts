@@ -13,7 +13,6 @@ const config: Configuration = {
   output: {
     path: path.join(process.cwd(), "build"),
     filename: "[name]-[contenthash].bundle.js",
-    publicPath: "auto",
   },
   resolve: {
     alias: {
@@ -29,8 +28,14 @@ const config: Configuration = {
     ],
     extensions,
   },
+  experiments: {
+    outputModule: true,
+  },
   plugins: [
     new container.ModuleFederationPlugin({
+      library: {
+        type: "module",
+      },
       name: "shell_webpack",
       remotes: {
         "@mfe-react/remote-react-webpack":
